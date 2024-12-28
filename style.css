@@ -141,7 +141,9 @@ div.content-page{
 }
 .prof{
   margin-top: 1rem;
-  width: 30%;
+  min-width: 200px;
+  min-height: 200px;
+  width: 25%;
   height: auto;
   border: 3px solid white;
   border-radius: 50%;
