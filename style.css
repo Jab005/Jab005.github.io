@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+PhagsPa&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+PhagsPa&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap');
+
+.font-noto-sans, h1{
+  font-family: "Noto Sans PhagsPa", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-open-sans, p{
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
+}
+h1{margin-bottom:5px;}
+p{
+  font-size: 20px;
+  margin-block: 3px;
+}
+body{
+  background-image: url("assets/sns1.jpg");
+  background-size: cover;
+}
+topper{
+  padding-left: 4rem;
+  padding-top: 0.9rem;
+  padding-right: 1rem;
+  margin: -1rem;
+  font-size: 1.5rem;
+  position: fixed;
+  width: 100%;
+  height: 3rem;
+  background-color: #2f006d;
+  border-bottom: 2px solid white;
+  z-index: 5;
+}
+topper h1{
+  transform: translateX(-4.5%);
+  margin-top: -5px;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+.musicbtn{
+  text-align: center;
+  position: fixed;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #ffffff00;
+  border: 2px solid white;
+  border-radius: 1rem;
+  cursor: pointer;
+  z-index: 6;
+}
+.musicbtn p{
+  transform: rotate(0deg);
+  transition: 1s;
+  color: white;
+  margin-top: -4px;
+  font-size: 2rem;
+}
+.menubtn{
+  margin-top: -2px;
+  position: fixed;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #00eaff00;
+  border: 2px solid white;
+  border-radius: 1rem;
+  cursor: pointer;
+  z-index: 6;
+}
+.menuarw{
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transition: 1s;
+  transform: translateX(-50%) rotate(-90deg);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 15px solid #f0f0f0
+}
+.menubar{
+  position: fixed;
+  height: 100%;
+  width: 0px;
+  background-color: #190039;
+  transition: 1s;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  padding-top: 3.4rem;
+  z-index: 3;
+}
+.menubar a{
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  display: block;
+  text-decoration: underline;
+  padding-left: 0.5rem;
+  margin: 3px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  z-index: 4;
+}
+.menubar p{
+  font-family: "Noto Sans PhagsPa", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 1.7rem;
+  display: block;
+  text-decoration: none;
+  padding-left: 0.6rem;
+  margin: 2rem 3px 0.5rem;
+  white-space: nowrap;
+  z-index: 4;
+}
+.menubar a:hover{color:aqua}
+div.content-page{
+  padding-top: 3.25rem;
+}
+.content-page{
+  color: white;
+}
+.imgctr{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.prof{
+  margin-top: 1rem;
+  width: 25%;
+  height: auto;
+  border: 3px solid white;
+  border-radius: 50%;
+  transition: 1s;
+}
+a{color:aqua;}
+a:hover{color:blueviolet;}
