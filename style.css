@@ -14,7 +14,10 @@
   font-variation-settings:
   "wdth" 100;
 }
-h1{margin-bottom:5px;}
+h1{
+  font-size: 2.5rem;
+  margin-bottom:5px;
+}
 p{
   font-size: 20px;
   margin-block: 3px;
@@ -24,9 +27,10 @@ body{
   background-size: cover;
 }
 topper{
-  padding-left: 4rem;
-  padding-top: 0.9rem;
-  padding-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem 0.5rem;
   margin: -1rem;
   font-size: 1.5rem;
   position: fixed;
@@ -37,33 +41,33 @@ topper{
   z-index: 5;
 }
 topper h1{
-  transform: translateX(-4.5%);
-  margin-top: -5px;
-  font-size: 2rem;
+  flex-grow: 1;
   text-align: center;
   color: white;
+  margin: 0;
 }
 .musicbtn{
+  transform: translateX(-1rem);
   text-align: center;
-  position: fixed;
   width: 2.5rem;
   height: 2.5rem;
   background-color: #ffffff00;
   border: 2px solid white;
   border-radius: 1rem;
   cursor: pointer;
+  margin-top: 3px;
   z-index: 6;
 }
 .musicbtn p{
   transform: rotate(0deg);
   transition: 1s;
   color: white;
-  margin-top: -4px;
+  margin-top: -3px;
   font-size: 2rem;
 }
 .menubtn{
-  margin-top: -2px;
-  position: fixed;
+  transform: translateY(1.5px);
+  text-align: center;
   width: 2.5rem;
   height: 2.5rem;
   background-color: #00eaff00;
@@ -82,7 +86,7 @@ topper h1{
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-top: 15px solid #f0f0f0
+  border-top: 15px solid #f0f0f0;
 }
 .menubar{
   position: fixed;
@@ -94,6 +98,7 @@ topper h1{
   top: 0;
   left: 0;
   padding-top: 3.4rem;
+  border-right: 0px solid white;
   z-index: 3;
 }
 .menubar a{
@@ -127,13 +132,9 @@ topper h1{
   white-space: nowrap;
   z-index: 4;
 }
-.menubar a:hover{color:aqua}
-div.content-page{
-  padding-top: 3.25rem;
-}
-.content-page{
-  color: white;
-}
+.menubar a:hover{color:aqua;}
+div.content-page{padding-top: 3.25rem;}
+.content-page{color: white;}
 .imgctr{
   display: flex;
   justify-content: center;
@@ -147,6 +148,7 @@ div.content-page{
   border: 3px solid white;
   border-radius: 50%;
   transition: 1s;
+  cursor: pointer;
 }
 a{color:aqua;}
 a:hover{color:blueviolet;}
