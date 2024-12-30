@@ -5,9 +5,9 @@ const thisDate = CurrentTime.getDate();
 const rgp = document.querySelector(".prof");
 const dmcage = document.querySelector(".dmcage");
 
-var musicmd = false;
 var imgsh = ["ctrimg01.jpg","ctrimg02.jpg","ctrimg03.jpg","ctrimg04.jpg","ctrimg05.jpg"];
 var age = ((thisMonth>=11)&&(thisDate>=10)) ? thisYear-2008 : thisYear-2009;
+var musicmd = false;
 
 function randInt(min=0,max=Number.MAX_SAFE_INTEGER){
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -15,9 +15,9 @@ function randInt(min=0,max=Number.MAX_SAFE_INTEGER){
 function menuBtn(){
   var menu = document.querySelector(".menubar");
   var arw = document.querySelector(".menuarw");
-  menu.style.width = menu.style.width=="300px" ? "0px" : "300px";
-  menu.style.borderRight = menu.style.width=="300px" ? "2px solid white" : "0px solid white";
-  arw.style.transform = menu.style.width=="300px" ? "translateX(-50%)rotate(90deg)" : "translateX(-50%)rotate(-90deg)";
+  menu.style.width = menu.style.width=="270px" ? "0px" : "270px";
+  menu.style.borderRight = menu.style.width=="270px" ? "2px solid white" : "0px solid white";
+  arw.style.transform = menu.style.width=="270px" ? "translateX(-50%)rotate(90deg)" : "translateX(-50%)rotate(-90deg)";
 };
 function musicSet(){
   var musicbg = document.querySelector("audio");

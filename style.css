@@ -23,7 +23,7 @@ p{
   margin-block: 3px;
 }
 body{
-  background-image: url("assets/sns1.jpg");
+  background-image: url("assets/sns.jpg");
   background-size: cover;
 }
 topper{
@@ -41,10 +41,10 @@ topper{
   z-index: 5;
 }
 topper h1{
-  flex-grow: 1;
   text-align: center;
   color: white;
   margin: 0;
+  width: fit-content;
 }
 .musicbtn{
   transform: translateX(-1rem);
