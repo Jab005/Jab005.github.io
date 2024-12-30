@@ -71,10 +71,10 @@ function forceCloseSite(date=thisDate,month=thisMonth,year=thisYear){
 if(thisMonth==12){
   console.log("Hello.. December...");
   forceDecember();
-}else if((thisMonth!=12)&&(thisMonth!=1)){
-  console.log("Hello friend, looking for this website content? Wait till December, ok?");
-  forceCloseSite();
-}else{
+}else if(thisMonth==1){
   console.log("Hello January!");
   forceJanuary();
+}else{
+  console.log("Hello friend, looking for this website content? Wait till December, ok?");
+  forceCloseSite();
 };
