@@ -15,14 +15,16 @@ const mart = document.querySelector(".mscp");
 var musicmd = false;
 
 function musicSet(){
-  musicmd = !musicmd
-  mscic.style.color = musicmd ? "aqua" : "white";
-  mscic.style.transform = musicmd ? "rotate(360deg) translateY(-2px)" : "rotate(0deg) translateY(-2px)";
-  musicmd ? sound.play() : sound.pause();
+  if(thisMonth==1||thisMonth==12){
+    musicmd = !musicmd
+    mscic.style.color = musicmd ? "aqua" : "white";
+    mscic.style.transform = musicmd ? "rotate(360deg) translateY(-2px)" : "rotate(0deg) translateY(-2px)";
+    musicmd ? sound.play() : sound.pause();
+  }else console.log("no");
 };
 
 hmpg.addEventListener("click", () => {
-  window.location.href = "../index.html";
+  window.location.href = "../";
 });
 
 // Core Function
@@ -41,7 +43,7 @@ function forceDecember(date=thisDate,year=thisYear){
     }catch(e){
       console.error(e);
       alert("Hmm.. it seems background music having a trouble while playing...\nPlease try again to play.");
-      sound.pause();
+      musicSet();
       mscic.style.transform = "rotate(0deg) translateY(-2px)";
     };
   },1000);
@@ -63,7 +65,7 @@ function forceJanuary(date=thisDate,year=thisYear){
     }catch(e){
       console.error(e);
       alert("Hmm.. it seems background music having a trouble while playing...\nPlease try again to play.");
-      sound.pause();
+      musicSet();
       mscic.style.transform = "rotate(0deg) translateY(-2px)";
     };
   },1000);
@@ -73,24 +75,37 @@ function forceJanuary(date=thisDate,year=thisYear){
 };
 function forceCloseSite(date=thisDate,month=thisMonth,year=thisYear){
   if((month==1)||(month==12)){
-    alert("Site is closed when current month is not December or January.\nTry another month.");
+    alert("Site is closed when current month is not December or January.\nTry on another month.");
     return;
   };
   imgi.src = "assets/last-december.jpg";
-  musicmd ? musicSet() : console.log("no");
+  sound.src = "assets/December-BLZ.mp3";
+  sound.load();
+  setTimeout(() => {
+    /*
+    - Here is still unexpected bug comes: Transforming after valid month (e.g. Natural logic: midnight last January -> midnight first February (not tested yet, maybe need some refresh and it'll be fixed as it's not related to refreshed page), other aspects: function (January -> February, tested)) will stops music but still active-blue indication of button is shown and no console logging (failed try-catch). Needs to be discovered later.
+    - NOTE: ternary works fine w/o timeout-try-catch, the damaged sector seems to be come from timeout and try-catch (it feels like higher vulnerability here).
+    */
+    try{
+      musicmd ? () => {musicSet();console.log("no");} : () => {};
+    }catch(e){
+      console.error(e);
+      sound.pause();
+      mscic.style.transform = "rotate(0deg) translateY(-2px)";
+    }
+  },1000);
   tart.textContent = "It's Not The Time";
   hart.textContent = "Friend, it hasn't even december yet..";
-  part.innerHTML = "<i>Be patient friend...</i>";
+  part.innerHTML = "Hello friend, looking for this page contents? Well I guess you didn't follow what I've said before...<br>Friend.. We'll meet in the next December.. ok?<br>Be patient!";
   mart.innerHTML = '<br>> Background music: <a class="mscm" href="https://youtu.be/Zg_F21_732o?si=SwUeSGuLpsOSRm9D">January</a> - by BLZ';
-  window.location.href = "./wrong-time.html";
 };
 
-if(thisMonth==12){
-  console.log("Hello.. December...");
-  forceDecember();
-}else if(thisMonth==1){
+if(thisMonth==1){
   console.log("Hello January!");
   forceJanuary();
+}else if(thisMonth==12){
+  console.log("Hello.. December...");
+  forceDecember();
 }else{
   console.log("Hello friend, looking for this website content? Wait till December, ok?");
   forceCloseSite();

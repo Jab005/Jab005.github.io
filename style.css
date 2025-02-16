@@ -25,6 +25,7 @@ p{
 body{
   background-image: url("assets/sns.jpg");
   background-size: cover;
+  background-color: black;
 }
 topper{
   display: flex;
@@ -45,6 +46,11 @@ topper h1{
   color: white;
   margin: 0;
   width: fit-content;
+  cursor: pointer;
+  transition: 1s;
+}
+topper h1:hover{
+  color: #b266f9;
 }
 .musicbtn{
   transform: translateX(-1rem);
@@ -81,7 +87,7 @@ topper h1{
   bottom: 0.75rem;
   left: 50%;
   transition: 1s;
-  transform: translateX(-50%) rotate(-90deg);
+  transform: translateX(-50%) translateY(-1px) rotate(-90deg);
   width: 0;
   height: 0;
   border-left: 12px solid transparent;
@@ -152,3 +158,12 @@ div.content-page{padding-top: 3.25rem;}
 }
 a{color:aqua;}
 a:hover{color:blueviolet;}
+.nscr{
+  color: white;
+  animation: 2s warn infinite;
+}
+@keyframes warn{
+  0%{color:white;}
+  50%{color:gray;}
+  100%{color:white;}
+}
