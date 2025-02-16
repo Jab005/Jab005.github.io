@@ -47,6 +47,8 @@ topper h1{
   color: white;
   margin: 0;
   width: fit-content;
+  overflow-x: hidden;
+  white-space: nowrap;
 }
 .musicbtn{
   display: flex;
@@ -103,6 +105,9 @@ topper h1{
   border-right: 12px solid transparent;
   border-top: 15px solid #f0f0f0;
 }
+.gohome:hover .btnarw{
+  border-top: 15px solid aqua;
+}
 .imgctr{
   display: flex;
   justify-content: center;
@@ -119,4 +124,13 @@ a.mscm{
 }
 a.mscm:hover{
   color: blueviolet;
+}
+.nscr{
+  color: white;
+  animation: 2s warn infinite;
+}
+@keyframes warn{
+  0%{color:white;}
+  50%{color:gray;}
+  100%{color:white;}
 }
